@@ -14,5 +14,6 @@ import java.util.Calendar
 
 @Throws(Throwable::class)
 fun main(args: Array<String>) {
-    Server("84.201.186.30", 8080).start()
+    Server("84.201.186.30",8080).start()
+//    ServerSocket(8080)
 }
