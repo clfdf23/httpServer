@@ -19,7 +19,7 @@ class Server(
     val serverSocket: ServerSocket = ServerSocket(port, 50, address)
 
     init {
-        println("server was created")
+        println("server was created on $address")
     }
     fun start() {
         while (true) {
