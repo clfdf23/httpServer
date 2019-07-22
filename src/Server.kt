@@ -2,11 +2,14 @@ import java.io.InputStream
 import java.io.OutputStream
 import java.net.InetAddress
 import java.net.ServerSocket
+import java.net.Socket
+import java.net.SocketException
 
 class Server(
     val address: InetAddress,
     val port: Int
 ){
+    var clientSocket: Socket? = null
     constructor(address: String?, port: Int) : this(
     address = InetAddress.getByName(address),
     port = port
@@ -21,16 +24,26 @@ class Server(
     init {
         println("server was created on $address:$port")
     }
+    @Throws(Throwable::class)
     fun start() {
         while (true) {
-            val clientSocket = serverSocket.accept()
-            println("clent connected")
-            Thread(ClientHandler(clientSocket)).start()
+
+            try {
+                clientSocket = serverSocket.accept()
+            }
+            catch (e: SocketException) {
+                println("connection broken")
+                break
+            }
+            println("client connected")
+            Thread(clientSocket?.let { ClientHandler(it) }).start()
         }
     }
 
     fun stop() {
-        if (!serverSocket.isClosed)
+        if (!serverSocket.isClosed && !Thread.currentThread().isInterrupted) {
             serverSocket.close()
+            Thread.currentThread().interrupt()
+        }
     }
 }

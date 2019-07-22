@@ -9,8 +9,14 @@
     <list default="true" id="ff994407-80bc-47ec-9aae-1d359c2de2b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Server_jar/Server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Server_jar/Server.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ClientHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Server/HttpServerKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/HttpServerKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/Response$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Response$Companion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HttpServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/HttpServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Response.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Response.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +33,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HttpServer.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+            <state relative-caret-position="221">
+              <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+              <folding>
+                <marker date="1563820794897" expanded="true" signature="389:580" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,11 +63,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Server.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="n#Server#0;n#Server#0" />
-              </folding>
+            <state relative-caret-position="139">
+              <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/net/ServerSocket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="517" column="18" selection-start-line="517" selection-start-column="18" selection-end-line="517" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -66,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClientHandler.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+            <state relative-caret-position="507">
+              <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
               <folding>
                 <element signature="e#0#140#0" expanded="true" />
               </folding>
@@ -78,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/io/BufferedReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6120">
+            <state relative-caret-position="445">
               <caret line="390" column="18" selection-start-line="390" selection-start-column="18" selection-end-line="390" selection-end-column="18" />
             </state>
           </provider>
@@ -87,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Request.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="27" selection-start-column="27" selection-end-column="27" />
+            <state relative-caret-position="157">
+              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -96,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Response.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+            <state relative-caret-position="421">
+              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -132,10 +147,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/SocketProcessor.kt" />
         <option value="$PROJECT_DIR$/src/extensions.kt" />
-        <option value="$PROJECT_DIR$/src/Request.kt" />
         <option value="$PROJECT_DIR$/src/extensions/Date.kt" />
-        <option value="$PROJECT_DIR$/src/ClientHandler.kt" />
         <option value="$PROJECT_DIR$/src/Response.kt" />
+        <option value="$PROJECT_DIR$/src/Request.kt" />
+        <option value="$PROJECT_DIR$/src/ClientHandler.kt" />
         <option value="$PROJECT_DIR$/src/HttpServer.kt" />
         <option value="$PROJECT_DIR$/src/Server.kt" />
       </list>
@@ -261,7 +276,7 @@
       <workItem from="1563374669365" duration="618000" />
       <workItem from="1563375365724" duration="37397000" />
       <workItem from="1563457038464" duration="1215000" />
-      <workItem from="1563732281630" duration="7019000" />
+      <workItem from="1563732281630" duration="14332000" />
     </task>
     <task id="LOCAL-00001" summary="change ip">
       <created>1563737457127</created>
@@ -319,11 +334,41 @@
       <option name="project" value="LOCAL" />
       <updated>1563798406439</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="args input">
+      <created>1563798688969</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1563798688969</updated>
+    </task>
+    <task id="LOCAL-00010" summary="args input">
+      <created>1563798894321</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1563798894321</updated>
+    </task>
+    <task id="LOCAL-00011" summary="args input">
+      <created>1563798937567</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1563798937567</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46249000" />
+    <option name="totallyTimeSpent" value="53562000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -341,11 +386,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25354108" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.3045326" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -394,13 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/net/ServerSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-381">
-          <caret line="138" column="11" selection-start-line="138" selection-start-column="11" selection-end-line="138" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/net/InetAddress.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -416,30 +454,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SocketProcessor.kt" />
-    <entry file="file://$PROJECT_DIR$/src/ClientHandler.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/io/BufferedReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6120">
-          <caret line="390" column="18" selection-start-line="390" selection-start-column="18" selection-end-line="390" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Request.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" selection-start-column="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/extensions/Date.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -447,13 +461,6 @@
           <folding>
             <element signature="e#20#72#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Response.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -471,20 +478,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Response.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="390" column="18" selection-start-line="390" selection-start-column="18" selection-end-line="390" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Request.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/net/ServerSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="517" column="18" selection-start-line="517" selection-start-column="18" selection-end-line="517" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/HttpServer.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        <state relative-caret-position="221">
+          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <marker date="1563820794897" expanded="true" signature="389:580" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClientHandler.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#140#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Server.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="n#Server#0;n#Server#0" />
-          </folding>
+        <state relative-caret-position="139">
+          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
         </state>
       </provider>
     </entry>

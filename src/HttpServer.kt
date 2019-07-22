@@ -11,17 +11,22 @@ import java.util.*
 import java.util.Calendar
 
 
-
 @Throws(Throwable::class)
 fun main(args: Array<String>) {
     println("Server ${args[0]}       port ${args[1]}")
     val server = Server(args[0], args[1].toInt())
-    try {
-        server.start()
-//    ServerSocket(8080)
-    }
-    finally {
-        println("asd")
-        server.stop()
+    Thread { server.start() }.start()
+    while (true) {
+        if (readLine() == "stop") {
+            try {
+                server.stop()
+            }
+            catch (t: Throwable) {
+            }
+            println("server closed")
+            break
+        }
+        else
+            continue
     }
 }

@@ -9,16 +9,13 @@ class ClientHandler(
     val inputStream: InputStream = socket.getInputStream(),
     val outputStream: OutputStream = socket.getOutputStream()
 ) : Runnable {
-
-    var inputString: String = ""
     override fun run() {
         try {
-            readInputHeaders()
+            val request = Request.makeRequest(readInputHeaders())
+            sendResponse(Response.from(request))
         } catch (t: Throwable) {
         }
-        println(inputString)
-        val request = Request.makeRequest(inputString)
-        sendResponse(Response.from(request))
+
     }
 
     private fun sendResponse(res: Response) {
@@ -26,17 +23,20 @@ class ClientHandler(
         outputStream.flush()
         socket.close()
         println("connection close")
-
+        Thread.currentThread().interrupt()
     }
 
     @Throws(Throwable::class)
-    fun readInputHeaders() {
+    fun readInputHeaders(): String {
+        var requestString = ""
         val bufferedReader = BufferedReader(InputStreamReader(inputStream))
         while (true) {
             val s = bufferedReader.readLine()
-            inputString += "$s\n"
+            requestString += "$s\n"
             if (s == null || s.trim().isEmpty())
                 break
         }
+        println("REQUEST:\n$requestString\$")
+        return requestString
     }
 }
