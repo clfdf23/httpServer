@@ -14,6 +14,7 @@ import java.util.Calendar
 
 @Throws(Throwable::class)
 fun main(args: Array<String>) {
+    println("Server ${args[0]}       port ${args[1]}")
     val server = Server(args[0], args[1].toInt())
     try {
         server.start()
