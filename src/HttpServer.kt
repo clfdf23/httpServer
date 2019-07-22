@@ -14,8 +14,8 @@ import java.util.Calendar
 
 @Throws(Throwable::class)
 fun main(args: Array<String>) {
-    val server = Server("10.130.0.12", 8080)
-    println("10.130.0.12")
+    val server = Server("0.0.0.0", 8080)
+    println("0.0.0.0")
     try {
         server.start()
 //    ServerSocket(8080)
