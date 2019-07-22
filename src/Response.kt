@@ -33,17 +33,25 @@ data class Response(
     }
 
     companion object {
-        fun from(re: Request): Response {
-            if (re.type == "")
+        fun from(req: Request): Response {
+            if (req.type == "")
                 return errorResponse("400.html","400 Bad Request")
-            if (re.type != "GET") {
+            if (req.type != "GET") {
                 return errorResponse("405.html", "405 Method Not Allowed")
             }
-            if (re.path.contains("..")) {
+            if (req.path.contains("..")) {
                 return okResponse("index.html", "200 OK")
             }
-            if (re.path == "/")
+            if (req.path == "/")
                 return okResponse("index.html", "200 OK")
+            val file = File(req.path)
+            if (file.exists())
+            {
+                if (file.isDirectory)
+                    okResponse(req.path + "/index.html", "200 OK")
+                else
+                    okResponse(req.path,"200 OK")
+            }
             return errorResponse("404.html", "404 Page Not Found")
         }
 

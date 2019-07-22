@@ -5,17 +5,16 @@ import java.io.OutputStream
 import java.net.Socket
 
 class ClientHandler(
-    val socket: Socket,
-    val inputStream: InputStream = socket.getInputStream(),
-    val outputStream: OutputStream = socket.getOutputStream()
+    private val socket: Socket,
+    private val inputStream: InputStream = socket.getInputStream(),
+    private val outputStream: OutputStream = socket.getOutputStream()
 ) : Runnable {
     override fun run() {
         try {
-            val request = Request.makeRequest(readInputHeaders())
+            val request = Request.makeRequest(readInputHeaders()) ?: return
             sendResponse(Response.from(request))
         } catch (t: Throwable) {
         }
-
     }
 
     private fun sendResponse(res: Response) {
@@ -32,9 +31,9 @@ class ClientHandler(
         val bufferedReader = BufferedReader(InputStreamReader(inputStream))
         while (true) {
             val s = bufferedReader.readLine()
-            requestString += "$s\n"
             if (s == null || s.trim().isEmpty())
                 break
+            requestString += "$s\n"
         }
         println("REQUEST:\n$requestString\$")
         return requestString

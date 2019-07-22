@@ -12,7 +12,9 @@ data class Request(
     val connectionStatus: String
 ) {
     companion object {
-        fun makeRequest(inputString: String): Request {
+        fun makeRequest(inputString: String): Request? {
+            if (inputString == "")
+                return null
             val topics = inputString.split('\n')
             val head = topics[0].split(' ')
             return Request.Builder()
