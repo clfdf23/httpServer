@@ -35,32 +35,32 @@ data class Response(
     companion object {
         fun from(req: Request): Response {
             if (req.type == "")
-                return errorResponse("400.html","400 Bad Request")
+                return errorResponse("/400.html","400 Bad Request")
             if (req.type != "GET") {
-                return errorResponse("405.html", "405 Method Not Allowed")
+                return errorResponse("/405.html", "405 Method Not Allowed")
             }
             if (req.path.contains("..")) {
-                return okResponse("index.html", "200 OK")
+                return okResponse("/index.html")
             }
             if (req.path == "/")
-                return okResponse("index.html", "200 OK")
-            val file = File(req.path)
+                return okResponse("/index.html")
+            val file = File("$WEB_DIR${req.path}")
             if (file.exists())
             {
                 if (file.isDirectory)
-                    okResponse(req.path + "/index.html", "200 OK")
+                    return okResponse(req.path + "/index.html")
                 else
-                    okResponse(req.path,"200 OK")
+                    return okResponse(req.path)
             }
-            return errorResponse("404.html", "404 Page Not Found")
+            return errorResponse("/404.html", "404 Page Not Found")
         }
 
         private fun errorResponse(filename: String, status: String): Response {
-            return Response(File("server/errors/$filename").readText(), status, contentType(filename))
+            return Response(File("$ERR_DIR$filename").readText(), status, contentType(filename))
         }
 
-        private fun okResponse(filename: String, status: String): Response {
-            return Response(File("server/web/$filename").readText(), status, contentType(filename))
+        private fun okResponse(filename: String): Response {
+            return Response(File("$WEB_DIR$filename").readText(), "200 OK", contentType(filename))
         }
 
         private fun contentType(filename: String): String {
@@ -77,5 +77,8 @@ data class Response(
                 else -> "application/${filename.substring(filename.lastIndexOf('.') + 1)}"
             }
         }
+
+        const val WEB_DIR = "server/web"
+        const val ERR_DIR = "server/errors"
     }
 }
