@@ -38,7 +38,7 @@ fun selectDayOfWeek(): String {
     }
 }
 fun selectMonth(s: String): String {
-    var a = s.split(' ')
+    val a = s.split(' ')
     return when (a[1]) {
         "01" -> "${a[0]} Jan ${a[2]} ${a[3]}"
         "02" -> "${a[0]} Feb ${a[2]} ${a[3]}"

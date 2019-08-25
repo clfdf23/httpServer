@@ -6,5 +6,5 @@ fun List<String>.findFirst(s: String) : String {
         if (it.contains(s))
             out = it
     }
-    return out;
+    return out
 }

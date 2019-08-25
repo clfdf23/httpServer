@@ -47,10 +47,10 @@ data class Response(
             val file = File("$WEB_DIR${req.path}")
             if (file.exists())
             {
-                if (file.isDirectory)
-                    return okResponse(req.path + "/index.html")
+                return if (file.isDirectory)
+                    okResponse(req.path + "/index.html")
                 else
-                    return okResponse(req.path)
+                    okResponse(req.path)
             }
             return errorResponse("/404.html", "404 Page Not Found")
         }

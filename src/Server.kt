@@ -1,5 +1,3 @@
-import java.io.InputStream
-import java.io.OutputStream
 import java.net.InetAddress
 import java.net.ServerSocket
 import java.net.Socket
@@ -10,15 +8,12 @@ class Server(
     val port: Int
 ){
     var clientSocket: Socket? = null
+
     constructor(address: String?, port: Int) : this(
     address = InetAddress.getByName(address),
     port = port
     )
 
-    constructor(port: Int) : this(
-    address = null,
-    port = port
-    )
     val serverSocket: ServerSocket = ServerSocket(port, 50, address)
 
     init {
